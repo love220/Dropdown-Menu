@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(80deg, #4053d0, #92effd);
+}
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 500px;
+    height: 600px;
+
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+
+.navigation .userBx {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    transition: 0.5s;
+    transition-delay: 0.5s;
+
+
+}
+
+.navigation .userBx .username {
+
+    font-size: 1.1em;
+    color: #555;
+}
+
+.navigation .active .userBx {
+    transition-delay: 0s;
+}
+
+
+
+.navigation .userBx .imgBx {
+    position: relative;
+    min-width: 50px;
+    height: 60px;
+    background: #000;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid white;
+}
+
+.navigation .userBx .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation .menutoggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .menutoggle::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: rgb(227, 14, 14);
+    transform: translateY(-10px);
+    box-shadow: 0 10px rgb(234, 10, 10);
+    transition: 0.5s;
+
+}
+
+.navigation .menutoggle::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: rgb(223, 12, 12);
+    transform: translateY(10px);
+    box-shadow: 0 10px rgb(220, 14, 14);
+    transition: 0.5s;
+
+}
+
+.navigation.active .menutoggle::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+    
+
+}
+
+.navigation.active .menutoggle::after {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #555;
+    
+
+}
+
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: calc(100%-60px);
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+    list-style: none;
+
+}
+
+.menu a li:hover {
+    color: #e43808;
+
+
+}
+
+.menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 1em;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #555;
+
+}
+
+.menu li:hover {
+    color: #08ec27;
+
+}
+
+
+.menu li a ion-icon {
+    font-size: 1.5em;
+}
