@@ -1,4 +1,4 @@
-# Web_development
+# Dropdown Menu
 Project  on creating  a Dropdown Menu using HTML, CSS and JAVASCRIPT
 
 For Icons refer: https://ionic.io/ionicons
